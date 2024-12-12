@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <!-- Demo styles -->
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sanjay Singh | Frontend Developer</title>
+    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="font.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="matter.js" defer></script>
+    <script src="script.js" defer></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+      .swiper-pagination span {
+        background-color: white;
+        height: 10px;
+        width: 10px;
+      }
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: #1788ae;
+      }
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+      .swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal {
+        margin-top: 8px;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body class=" overflow-x-hidden box-border bg-[#111] text-white font-['Nunito']">
+    <section id="homeSection" class="flex flex-col justify-between h-screen relative">
+      <header
+        class="w-full flex justify-between items-center px-4 mt-4 mx-auto z-10 pointer-events-none"
+      >
+        <img
+          class="rounded-full ml-4 md:max-w-12 max-w-10 mt-3"
+          src="assets/images/name-logo.png"
+          alt="name-logo"
+        />
+        <div class="pointer-events-auto flex space-x-8 items-center mr-4">
+          <a href="tel:8847465410">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-phone hover:text-white text-[#b0b2c3] hover:font-bold"
+            >
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+              ></path>
+            </svg>
+          </a>
+          <a href="https://wa.me/8847465410?text=Hi, How are you? " target="_blank">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fab"
+              data-icon="whatsapp"
+              class="svg-inline--fa fa-whatsapp fa-w-14 hover:text-white text-[#b0b2c3] hover:font-bold"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 448 512"
+            >
+              <path
+                fill="currentColor"
+                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </header>
+      <div class="border border-white absolute inset-0 hidden md:block" id="wrapper-canvas"></div>
+      <div id="home-content" class="flex relative">
+        <div class="w-full max-w-screen-xl mx-auto px-[64px]">
+          <img
+            class="media1060:w-[600px] media910:w-[500px] media750:w-[400px] media625:w-[320px] w-full absolute top-0 -translate-y-1/4 media625:translate-x-1/2 -translate-x-1/5 pointer-events-none"
+            src="assets/images/name-logo.jpg"
+            alt="image-logo"
+          />
+          <div class="relative z-10">
+            <h1
+              class="media1060:text-6xl media910:text-5xl media750:text-4xl media625:text-[32px] text-4xl font-['Spartan'] mr-10 pointer-events-none"
+            >
+              Sanjay Singh
+            </h1>
+            <p
+              class="font-['Merriweather'] italic mb-8 mt-6 media750:text-[16px] media625:text-sm text-sm pointer-events-none mr-10"
+            >
+              Intractive Front-end Developer
+            </p>
+            <a href="#about-section">
+              <button
+                id="about"
+                class="bg-orange-300 cursor-pointer font-extrabold px-5 py-2 rounded-[5px] bg-gradient-to-l from-orange-300 to-orange-600 relative hover:scale-110 ease-in-out duration-200 group"
+              >
+                About Me
+                <svg
+                  class="absolute top-1/2 -translate-y-1/2 -right-6 group-hover:-right-8 ease-in-out duration-200"
+                  xmlns:dc="http://purl.org/dc/elements/1.1/"
+                  xmlns:cc="http://creativecommons.org/ns#"
+                  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                  xmlns:svg="http://www.w3.org/2000/svg"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                  version="1.1"
+                  x="0px"
+                  y="0px"
+                  width="44"
+                  height="44"
+                  viewBox="0 0 100 100"
+                >
+                  <g transform="translate(0,-952.36218)">
+                    <path
+                      style="
+                        text-indent: 0;
+                        text-transform: none;
+                        direction: ltr;
+                        color: #000000;
+                        enable-background: accumulate;
+                      "
+                      d="m 88.999835,1002.3621 c 0,-0.4628 -0.2799,-1.0773 -0.5639,-1.3755 l -15.9997,-17.00026 c -0.747,-0.7723 -1.9572,-0.8618 -2.8281,-0.078 -0.7786,0.7007 -0.798,2.0673 -0.078,2.8282 l 12.8435,13.62516 -69.37347,0 c -1.1046,0 -2,0.8954 -2,2 0,1.1046 0.8954,2.0001 2,2.0001 l 69.37347,0 -12.8435,13.6252 c -0.7199,0.7608 -0.6688,2.0938 0.078,2.8281 0.7885,0.7752 2.0925,0.7062 2.8281,-0.078 l 15.9997,-17.0002 c 0.4701,-0.4611 0.556,-0.9052 0.5639,-1.3748 z"
+                      fill="#fff"
+                      fill-opacity="1"
+                      stroke="white"
+                      stroke-width="2"
+                      marker="none"
+                      visibility="visible"
+                      display="inline"
+                      overflow="visible"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </a>
+          </div>
+        </div>
+        <ul id="home-ul" class="ml-auto space-y-6 text-[#1b1c25] absolute right-10">
+          <li class="w-7 hover:text-white text-[#b0b2c3]">
+            <a href="https://www.linkedin.com/in/sanjay-singh-rawat-a39b11302" target="_blank">
+              <svg class="full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                  fill="currentColor"
+                  d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="w-7 hover:text-white text-[#b0b2c3]">
+            <a href="https://github.com/ssrawat1" target="_blank">
+              <svg class="full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                <path
+                  fill="currentColor"
+                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="w-7 hover:text-white text-[#b0b2c3]">
+            <a href="mailto:ssr911999@gmail.com" target="_blank">
+              <svg class="full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path
+                  fill="currentColor"
+                  d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="w-7 hover:text-white text-[#b0b2c3]">
+            <a href="https://www.instagram.com/sanjay_uk09" target="_blank">
+              <svg class="full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                  fill="currentColor"
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="relative after:content-[''] after:absolute after:w-[2px] after:h-5 after:bg-[#444] self-center after:left-1/2 after:-translate-x-1/2 after:top-[100px]"
+      >
+        <a href="#recent-works-link">
+          <button
+            class="bg-orange-300 cursor-pointer font-extrabold md:px-5 px-3 py-2 rounded-[5px] bg-gradient-to-l from-orange-300 to-orange-600 hover: relative hover:scale-110 ease-in-out duration-200 group mb-20"
+          >
+            Recent Projects
+            <svg
+              class="absolute left-1/2 -translate-x-1/2 top-10 group-hover:top-12 ease-in-out duration-200 rotate-90"
+              xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:cc="http://creativecommons.org/ns#"
+              xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+              xmlns:svg="http://www.w3.org/2000/svg"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+              xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+              version="1.1"
+              x="0px"
+              y="0px"
+              width="44"
+              height="44"
+              viewBox="0 0 100 100"
+            >
+              <g transform="translate(0,-952.36218)">
+                <path
+                  style="
+                    text-indent: 0;
+                    text-transform: none;
+                    direction: ltr;
+                    color: #11443c;
+                    enable-background: accumulate;
+                  "
+                  d="m 88.999835,1002.3621 c 0,-0.4628 -0.2799,-1.0773 -0.5639,-1.3755 l -15.9997,-17.00026 c -0.747,-0.7723 -1.9572,-0.8618 -2.8281,-0.078 -0.7786,0.7007 -0.798,2.0673 -0.078,2.8282 l 12.8435,13.62516 -69.37347,0 c -1.1046,0 -2,0.8954 -2,2 0,1.1046 0.8954,2.0001 2,2.0001 l 69.37347,0 -12.8435,13.6252 c -0.7199,0.7608 -0.6688,2.0938 0.078,2.8281 0.7885,0.7752 2.0925,0.7062 2.8281,-0.078 l 15.9997,-17.0002 c 0.4701,-0.4611 0.556,-0.9052 0.5639,-1.3748 z"
+                  fill="#fff"
+                  fill-opacity="1"
+                  stroke="white"
+                  stroke-width="2"
+                  marker="none"
+                  visibility="visible"
+                  display="inline"
+                  overflow="visible"
+                />
+              </g>
+            </svg>
+          </button>
+        </a>
+      </div>
+      <section
+        id="about-section"
+        class="pointer-events-none absolute max-w-[1200px] md:h-fit  max-h-[650px] rounded-xl bg-[#191919] flex flex-col media1150:flex-row justify-around items-center font-['Nunito'] media1150:mx-40 mx-5 my-5 opacity-0"
+      >
+        <div class="w-full flex flex-col justify-center items-center media1150:pl-20 px-10">
+          <h2 class="text-[#55cbff] media1150:text-xl text-base font-bold media1150:mt-16 mt-5">
+            ABOUT ME
+          </h2>
+          <p
+            class="media1150:max-w-sm max-w-full media1150:mb-4 mb-2 leading-relaxed media500:text-base media400:text-sm text-xs pt-2"
+          >
+            I’m Sanjay Singh Rawat, a frontend developer passionate about creating responsive and
+            dynamic user interfaces. My dedication to mastering frontend technologies sets me apart.
+            With a solid foundation and a quick adaptability to new tools, I’m eager to bring my
+            skills to your team. I’m excited to find a place where I can apply my expertise and
+            contribute to your company’s growth. I look forward to working under great leadership
+            and adding value to your team.
+          </p>
+
+          <ul class="flex flex-wrap media1150:max-w-sm max-w-full my-1">
+            <li
+              class="media500:text-xs text-sm m-2 media855:py-0 media855:px-4 py-1 px-2 border border-solid border-[#444] rounded-full bg-[#1e1e1e] text-[#d3b62a] font-medium"
+            >
+              #javascript
+            </li>
+            <li
+              class="media500:text-xs text-sm m-2 py-1 px-2 border border-solid border-[#444] rounded-full bg-[#1e1e1e] text-[#61dafb] font-medium"
+            >
+              #typescript
+            </li>
+            <li
+              class="media500:text-xs text-sm m-2 py-1 px-2 border border-solid border-[#444] rounded-full bg-[#1e1e1e] text-[#764ABC] font-medium"
+            >
+              #react
+            </li>
+            <li
+              class="media500:text-xs text-sm m-2 py-1 px-2 border border-solid border-[#444] rounded-full bg-[#1e1e1e] text-[#e34c26] font-medium"
+            >
+              #redux
+            </li>
+            <li
+              class="media500:text-xs text-sm m-2 py-1 px-2 border border-solid border-[#444] rounded-full bg-[#1e1e1e] text-[#1572b6] font-medium"
+            >
+              #node.js
+            </li>
+            <li
+              class="media500:text-xs text-sm m-2 py-1 px-2 border border-solid border-[#444] rounded-full bg-[#1e1e1e] text-[#7810f7] font-medium"
+            >
+              #tailwind
+            </li>
+          </ul>
+          <div>
+            <h2
+              class="text-[#55cbff] media1150:text-xl text-base font-bold  media500:mt-4 mt-2"
+            >
+              FRONTEND
+            </h2>
+          </div>
+          <div class="max-w-full flex media400:gap-8 gap-4 items-center md:mb-16 mb-5 mt-12">
+            <div class="react-icon flex flex-col justify-center items-center relative group">
+              <div
+                class="text-black tooltip text-sm absolute bottom-full bg-[#61dafb] media1150:py-1 media1150:px-4 py-1 px-4 rounded-full font-semibold opacity-0 duration-200 ease-transition group-hover:-translate-y-3 sm:group-hover:opacity-100"
+              >
+                React
+              </div>
+              <svg
+                viewBox="175.7 78 490.6 436.9"
+                xmlns="http://www.w3.org/2000/svg"
+                class="media500:max-w-10 media500:min-h-10 max-w-8 min-h-8 cursor-pointer"
+              >
+                <g fill="#61dafb">
+                  <path
+                    d="m666.3 296.5c0-32.5-40.7-63.3-103.1-82.4 14.4-63.6 8-114.2-20.2-130.4-6.5-3.8-14.1-5.6-22.4-5.6v22.3c4.6 0 8.3.9 11.4 2.6 13.6 7.8 19.5 37.5 14.9 75.7-1.1 9.4-2.9 19.3-5.1 29.4-19.6-4.8-41-8.5-63.5-10.9-13.5-18.5-27.5-35.3-41.6-50 32.6-30.3 63.2-46.9 84-46.9v-22.3c-27.5 0-63.5 19.6-99.9 53.6-36.4-33.8-72.4-53.2-99.9-53.2v22.3c20.7 0 51.4 16.5 84 46.6-14 14.7-28 31.4-41.3 49.9-22.6 2.4-44 6.1-63.6 11-2.3-10-4-19.7-5.2-29-4.7-38.2 1.1-67.9 14.6-75.8 3-1.8 6.9-2.6 11.5-2.6v-22.3c-8.4 0-16 1.8-22.6 5.6-28.1 16.2-34.4 66.7-19.9 130.1-62.2 19.2-102.7 49.9-102.7 82.3 0 32.5 40.7 63.3 103.1 82.4-14.4 63.6-8 114.2 20.2 130.4 6.5 3.8 14.1 5.6 22.5 5.6 27.5 0 63.5-19.6 99.9-53.6 36.4 33.8 72.4 53.2 99.9 53.2 8.4 0 16-1.8 22.6-5.6 28.1-16.2 34.4-66.7 19.9-130.1 62-19.1 102.5-49.9 102.5-82.3zm-130.2-66.7c-3.7 12.9-8.3 26.2-13.5 39.5-4.1-8-8.4-16-13.1-24-4.6-8-9.5-15.8-14.4-23.4 14.2 2.1 27.9 4.7 41 7.9zm-45.8 106.5c-7.8 13.5-15.8 26.3-24.1 38.2-14.9 1.3-30 2-45.2 2-15.1 0-30.2-.7-45-1.9-8.3-11.9-16.4-24.6-24.2-38-7.6-13.1-14.5-26.4-20.8-39.8 6.2-13.4 13.2-26.8 20.7-39.9 7.8-13.5 15.8-26.3 24.1-38.2 14.9-1.3 30-2 45.2-2 15.1 0 30.2.7 45 1.9 8.3 11.9 16.4 24.6 24.2 38 7.6 13.1 14.5 26.4 20.8 39.8-6.3 13.4-13.2 26.8-20.7 39.9zm32.3-13c5.4 13.4 10 26.8 13.8 39.8-13.1 3.2-26.9 5.9-41.2 8 4.9-7.7 9.8-15.6 14.4-23.7 4.6-8 8.9-16.1 13-24.1zm-101.4 106.7c-9.3-9.6-18.6-20.3-27.8-32 9 .4 18.2.7 27.5.7 9.4 0 18.7-.2 27.8-.7-9 11.7-18.3 22.4-27.5 32zm-74.4-58.9c-14.2-2.1-27.9-4.7-41-7.9 3.7-12.9 8.3-26.2 13.5-39.5 4.1 8 8.4 16 13.1 24s9.5 15.8 14.4 23.4zm73.9-208.1c9.3 9.6 18.6 20.3 27.8 32-9-.4-18.2-.7-27.5-.7-9.4 0-18.7.2-27.8.7 9-11.7 18.3-22.4 27.5-32zm-74 58.9c-4.9 7.7-9.8 15.6-14.4 23.7-4.6 8-8.9 16-13 24-5.4-13.4-10-26.8-13.8-39.8 13.1-3.1 26.9-5.8 41.2-7.9zm-90.5 125.2c-35.4-15.1-58.3-34.9-58.3-50.6s22.9-35.6 58.3-50.6c8.6-3.7 18-7 27.7-10.1 5.7 19.6 13.2 40 22.5 60.9-9.2 20.8-16.6 41.1-22.2 60.6-9.9-3.1-19.3-6.5-28-10.2zm53.8 142.9c-13.6-7.8-19.5-37.5-14.9-75.7 1.1-9.4 2.9-19.3 5.1-29.4 19.6 4.8 41 8.5 63.5 10.9 13.5 18.5 27.5 35.3 41.6 50-32.6 30.3-63.2 46.9-84 46.9-4.5-.1-8.3-1-11.3-2.7zm237.2-76.2c4.7 38.2-1.1 67.9-14.6 75.8-3 1.8-6.9 2.6-11.5 2.6-20.7 0-51.4-16.5-84-46.6 14-14.7 28-31.4 41.3-49.9 22.6-2.4 44-6.1 63.6-11 2.3 10.1 4.1 19.8 5.2 29.1zm38.5-66.7c-8.6 3.7-18 7-27.7 10.1-5.7-19.6-13.2-40-22.5-60.9 9.2-20.8 16.6-41.1 22.2-60.6 9.9 3.1 19.3 6.5 28.1 10.2 35.4 15.1 58.3 34.9 58.3 50.6-.1 15.7-23 35.6-58.4 50.6z"
+                  ></path>
+                  <circle cx="420.9" cy="296.5" r="45.7"></circle>
+                </g>
+              </svg>
+              <h2 class="text-[#61dafb] media1060:text-base md:text-lg text-sm font-bold mt-2 cursor-pointer">
+                R
+              </h2>
+            </div>
+            <div class="react-icon flex flex-col justify-center items-center relative group">
+              <div
+                class="tooltip text-sm absolute bottom-full bg-[#d3b62a] media1150:py-1 media1150:px-4 py-1 px-4 rounded-full font-semibold opacity-0 duration-200 ease-jump group-hover:-translate-y-3 sm:group-hover:opacity-100"
+              >
+                Javascript
+              </div>
+
+              <img
+                src="./assets/images/javascript-logo.png"
+                alt="javascript-logo"
+                class="media500:max-w-10 media500:min-h-10 max-w-8 min-h-8 cursor-pointer"
+              />
+              <h2 class="text-[#d3b62a] media1060:text-base md:text-lg text-sm font-bold mt-2 cursor-pointer">
+                J
+              </h2>
+            </div>
+            <div class="react-icon flex flex-col justify-center items-center relative group">
+              <div
+                class="-left-3 tooltip text-sm absolute bottom-full bg-[#764abb] media1150:py-1 media1150:px-4 py-1 px-4 rounded-full font-semibold opacity-0 duration-200 ease-jump group-hover:-translate-y-3 sm:group-hover:opacity-100"
+              >
+                Redux
+              </div>
+              <img
+                src="./assets/images/Redux-image.webp"
+                alt="redux-logo"
+                class="media500:max-w-10 media500:min-h-10 max-w-8 min-h-8 cursor-pointer"
+              />
+              <h2 class="text-[#764abb] media1060:text-base md:text-lg text-sm font-bold  mt-2 cursor-pointer">
+                R
+              </h2>
+            </div>
+            <div class="react-icon flex flex-col justify-center items-center relative group">
+              <div
+                class="tooltip text-sm absolute bottom-full bg-[#39bcf9] media1150:py-1 media1150:px-4 py-1 px-4 rounded-full font-semibold opacity-0 duration-200 ease-jump group-hover:-translate-y-3 sm:group-hover:opacity-100"
+              >
+                Tailwind
+              </div>
+              <img
+                src="./assets/images/Tailwind-css.png"
+                alt="tailwind-log"
+                class="media500:max-w-10 media500:min-h-10 max-w-8 min-h-8 cursor-pointer"
+              />
+              <h2 class="text-[#39bcf9] media1060:text-base md:text-lg text-sm font-bold  mt-2 cursor-pointer">
+                T
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="max-w-full">
+          <div
+            id="close-icon"
+            class="absolute top-4 right-4 bg-[#27292d] rounded-full p-2 cursor-pointer hover:rotate-180 hover:bg-[#333] duration-200"
+          >
+            <img src="./assets/icons/x.svg" alt="close-icon" class="md:w-5 w-3" />
+          </div>
+          <div class="w-full md:block hidden mb-10 media1150:pb-0 pb-20">
+            <img
+              class="media1150:max-w-full max-w-[420px] m-auto  "
+              src="./assets/images/coder.svg"
+              alt="coder-img"
+            />
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section id="recent-works-link">
+      <section class="max-w-screen-xl mx-auto px-4 relative">
+        <h2
+          class="md:text-[40px] text-4xl bg-[#111] z-10 relative font-bold px-4 py-2 w-max mx-auto text-center text-orange-500 md:border-b-2 md:border-2 md:rounded-b-lg md:border-t-0 md:border-orange-500"
+        >
+          Latest Works
+        </h2>
+        <div
+          class="flex md:flex-row flex-col md:gap-[80px] gap-4 items-center md:mt-20 mt-12 relative"
+        >
+          <div
+            class="h-[1px] left-1/4 right-1/2 bg-[#b73379] absolute top-1/2 md:block hidden"
+          ></div>
+          <a
+            href="https://shoping-hub.netlify.app/"
+            target="_blank"
+            class="absolute left-1/2 -translate-x-1/2 bg-[#111] z-10 md:block hidden"
+          >
+            <div
+              class="w-4 h-4 rounded-full border-[3px] border-[#b73379] hover:scale-110 ease-in-out duration-100"
+            ></div>
+          </a>
+          <a href="https://shoping-hub.netlify.app/" class="flex w-full relative" target="_blank">
+            <div
+              class="flex flex-col items-center relative group md:hover:scale-105 ease-linear duration-200"
+            >
+              <span
+                class="md:flex bg-[#b73379] w-max px-4 py-2 rounded items-center gap-2 md:absolute top-4 group-hover:-top-16 ease-jump duration-200 left-1/2 md:-translate-x-1/2 after:w-4 after:h-4 md:after:absolute after:left-1/2 after:-translate-x-1/2 after:rotate-45 after:-bottom-2 after:bg-inherit hidden"
+                >Shopee
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-external-link"
+                >
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </span>
+              <img
+                src="./assets/images/shopee.png"
+                alt="shopeeApp"
+                class="lg:max-w-[400px] md:max-w-xs w-full drop-shadow-[0_0px_60px_rgba(59,130,246,0.7)] z-10 mr-auto relative"
+              />
+            </div>
+          </a>
+          <div class="w-full ml-10 mr-10">
+            <h3 class="text-[#ca428a] font-bold lg:text-4xl text-3xl">Shopee</h3>
+            <span class="text-[#f570b6] lg:text-lg text-[16px]"
+              >An Efficient and Scalable Shopping Experience</span
+            >
+            <p class="text-justify mt-2 lg:text-base text-sm">
+              Developed a shopping app with Redux Toolkit, featuring Async Thunk for API data
+              fetching, robust state management, and custom middleware. Enhanced user experience
+              with efficient error handling and state access using selectors.
+            </p>
+            <ul class="flex flex-wrap gap-2 mt-2 ]">
+              <li
+                class="border rounded-[50px] border-[#999] px-[10px] py-[5px] lg:text-[16px] text-sm"
+              >
+                #react
+              </li>
+
+              <li
+                class="border rounded-[50px] border-[#999] px-[10px] py-[5px] lg:text-[16px] text-sm"
+              >
+                #javaScript
+              </li>
+              <li
+                class="border rounded-[50px] border-[#999] px-[10px] py-[5px] lg:text-[16px] text-sm"
+              >
+                #reduxToolkit
+              </li>
+              <li
+                class="border rounded-[50px] border-[#999] px-[10px] py-[5px] lg:text-[16px] text-sm"
+              >
+                #routing
+              </li>
+              <li
+                class="border rounded-[50px] border-[#999] px-[10px] py-[5px] lg:text-[16px] text-sm"
+              >
+                #customMiddleware
+              </li>
+              <li
+                class="border rounded-[50px] border-[#999] px-[10px] py-[5px] lg:text-[16px] text-sm"
+              >
+                #ayncThunk
+              </li>
+              <li
+                class="border rounded-[50px] border-[#999] px-[10px] py-[5px] lg:text-[16px] text-sm"
+              >
+                #createAsyncThunk
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="flex md:flex-row flex-col md:gap-[80px] gap-4 items-center md:mt-20 mt-12 relative"
+        >
+          <div class="ml-10 mr-10 w-full order-2 md:order-1">
+            <h3 class="text-[#ff5553] font-bold lg:text-4xl text-3xl">Todo List</h3>
+            <span class="text-[#fc815c] lg:text-lg text-[16px]"
+              >Your Ultimate Task Management Tool</span
+            >
+
+            <p class="text-justify mt-2 lg:text-[16px] text-sm">
+              Developed a Todo List App with React, featuring CRUD operations, local storage for
+              persistence, and a responsive design. Utilized useState and useEffect for state
+              management, Context API for global state, and custom CSS for styling.
+            </p>
+            <ul class="flex flex-wrap gap-2 mt-2">
+              <li
+                class="border rounded-[50px] border-[#999] px-[10px] py-[5px] lg:text-[16px] text-sm"
+              >
+                #react
+              </li>
+
+              <li
+                class="border rounded-[50px] border-[#999] px-[10px] py-[5px] lg:text-[16px] text-sm"
+              >
+                #javaScript
+              </li>
+              <li
+                class="border rounded-[50px] border-[#999] px-[10px] py-[5px] lg:text-[16px] text-sm"
+              >
+                #contextAPI
+              </li>
+              <li
+                class="border rounded-[50px] border-[#999] px-[10px] py-[5px] lg:text-[16px] text-sm"
+              >
+                #localStorage
+              </li>
+              <li
+                class="border rounded-[50px] border-[#999] px-[10px] py-[5px] lg:text-[16px] text-sm"
+              >
+                #CRUD-Operations
+              </li>
+            </ul>
+          </div>
+          <div
+            class="h-[1px] left-1/2 right-1/4 bg-[#ff5553] absolute top-1/2 md:block hidden"
+          ></div>
+          <a
+            href="https://todofusion.netlify.app/"
+            target="_blank"
+            class="absolute left-1/2 -translate-x-1/2 bg-[#111] z-10 md:block hidden"
+          >
+            <div
+              class="w-4 h-4 rounded-full border-[3px] border-[#ff5553] hover:scale-110 ease-in-out duration-100"
+            ></div>
+          </a>
+          <a
+            href="https://todofusion.netlify.app/"
+            class="order-1 md:order-2 flex w-full"
+            target="_blank"
+          >
+            <div class="relative group md:hover:scale-105 ease-linear duration-200 ml-auto">
+              <span
+                class="md:flex bg-[#ff5553] w-max px-4 py-2 rounded items-center gap-2 md:absolute top-4 group-hover:-top-16 after ease-jump duration-200 left-1/2 md:-translate-x-1/2 after:w-4 after:h-4 md:after:absolute after:left-1/2 after:-translate-x-1/2 after:rotate-45 after:-bottom-2 after:bg-inherit hidden"
+                >Todo List
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-external-link"
+                >
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </span>
+              <img
+                src="./assets/images/todoList.png"
+                alt="todoList"
+                class="lg:max-w-[400px] md:max-w-xs w-full drop-shadow-[0_0px_60px_rgba(59,130,246,0.7)] z-10 relative"
+              />
+            </div>
+          </a>
+        </div>
+        <div
+          class="flex md:flex-row flex-col md:gap-[80px] gap-4 items-center md:mt-20 mt-12 relative"
+        >
+          <div
+            class="h-[1px] left-1/4 right-1/2 bg-[#47afa1] absolute top-1/2 md:block hidden"
+          ></div>
+          <a
+            href="https://tubecraft.netlify.app/"
+            target="_blank"
+            class="absolute left-1/2 -translate-x-1/2 bg-[#111] z-10 md:block hidden"
+          >
+            <div
+              class="w-4 h-4 rounded-full border-[3px] border-[#47afa1] hover:scale-110 ease-in-out duration-100"
+            ></div>
+          </a>
+          <a href="https://tubecraft.netlify.app/" class="flex w-full" target="_blank">
+            <div class="relative group md:hover:scale-105 ease-linear duration-200">
+              <span
+                class="md:flex bg-[#47afa1] w-max px-4 py-2 rounded items-center gap-2 md:absolute top-4 group-hover:-top-16 ease-jump duration-200 left-1/2 md:-translate-x-1/2 after:w-4 after:h-4 md:after:absolute after:left-1/2 after:-translate-x-1/2 after:rotate-45 after:-bottom-2 after:bg-inherit hidden"
+                >Youtube Clone
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-external-link"
+                >
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </span>
+              <img
+                src="./assets/images/youTubeClone.webp"
+                alt="YoutubeClone"
+                class="lg:max-w-[400px] md:max-w-xs w-full drop-shadow-[0_0px_60px_rgba(59,130,246,0.7)] z-10 mr-auto relative"
+              />
+            </div>
+          </a>
+          <div class="ml-10 mr-10 w-full">
+            <h3 class="text-[#47afa1] font-bold lg:text-4xl text-3xl">YouTube Clone</h3>
+            <span class="text-[#47afa1] lg:text-lg text-base">
+              An Engaging and Scalable Video Platform</span
+            >
+            <p class="text-justify mt-2 lg:text-base text-sm">
+              Built a responsive YouTube clone with React that includes dynamic video playback,
+              real-time comments, a collapsible sidebar, and efficient client-side routing with
+              React Router.
+            </p>
+            <ul class="flex flex-wrap gap-2 mt-2">
+              <li
+                class="border rounded-[50px] border-[#999] px-[10px] py-[5px] lg:text-[16px] text-sm"
+              >
+                #react
+              </li>
+              <li
+                class="border rounded-[50px] border-[#999] px-[10px] py-[5px] lg:text-[16px] text-sm"
+              >
+                #dynamicContent
+              </li>
+              <li
+                class="border rounded-[50px] border-[#999] px-[10px] py-[5px] lg:text-[16px] text-sm"
+              >
+                #javaScript
+              </li>
+              <li
+                class="border rounded-[50px] border-[#999] px-[10px] py-[5px] lg:text-[16px] text-sm"
+              >
+                #reactRouter
+              </li>
+              <li
+                class="border rounded-[50px] border-[#999] px-[10px] py-[5px] lg:text-[16px] text-sm"
+              >
+                #videoPlayer
+              </li>
+              <li
+                class="border rounded-[50px] border-[#999] px-[10px] py-[5px] lg:text-[16px] text-sm"
+              >
+                #responsiveDesign
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="flex md:flex-row flex-col md:gap-[80px] gap-4 items-center md:mt-20 mt-12 relative"
+        >
+          <div class="order-2 md:order-1 w-full ml-10 mr-10">
+            <h3 class="text-[#cd8600] font-bold lg:text-4xl text-3xl">Registration Form</h3>
+            <span class="text-[#cd8600] lg:text-lg text-base"
+              >Responsive React Registration Form with Custom Validation</span
+            >
+            <p class="text-justify mt-2 lg:text-base text-sm">
+              Created a React registration form with effective data handling, smooth navigation, and
+              custom validation. It simulates network delays for a realistic user experience.
+            </p>
+            <ul class="flex flex-wrap gap-2 mt-2">
+              <li
+                class="border rounded-[50px] border-[#999] px-[10px] py-[5px] lg:text-[16px] text-sm"
+              >
+                #reactHookForm
+              </li>
+              <li
+                class="border rounded-[50px] border-[#999] px-[10px] py-[5px] lg:text-[16px] text-sm"
+              >
+                #react
+              </li>
+              <li
+                class="border rounded-[50px] border-[#999] px-[10px] py-[5px] lg:text-[16px] text-sm"
+              >
+                #javaScript
+              </li>
+              <li
+                class="border rounded-[50px] border-[#999] px-[10px] py-[5px] lg:text-[16px] text-sm"
+              >
+                #stateManagement
+              </li>
+              <li
+                class="border rounded-[50px] border-[#999] px-[10px] py-[5px] lg:text-[16px] text-sm"
+              >
+                #formValidation
+              </li>
+              <li
+                class="border rounded-[50px] border-[#999] px-[10px] py-[5px] lg:text-[16px] text-sm"
+              >
+                #routing
+              </li>
+            </ul>
+          </div>
+          <div
+            class="h-[1px] left-1/2 right-1/4 bg-[#cd8600] absolute top-1/2 md:block hidden"
+          ></div>
+          <a
+            href="https://userregreactapp.netlify.app"
+            class="absolute left-1/2 -translate-x-1/2 bg-[#111] z-10 md:block hidden"
+            target="_blank"
+          >
+            <div
+              class="w-4 h-4 rounded-full border-[3px] border-[#cd8600] hover:scale-110 ease-in-out duration-100"
+            ></div>
+          </a>
+          <a
+            href="https://userregreactapp.netlify.app"
+            class="order-1 md:order-2 flex w-full"
+            target="_blank"
+          >
+            <div class="relative group md:hover:scale-105 ease-linear duration-200 ml-auto">
+              <span
+                class="md:flex bg-[#cd8600] w-max px-4 py-2 rounded items-center gap-2 md:absolute top-4 group-hover:-top-16 ease-jump duration-200 left-1/2 md:-translate-x-1/2 after:w-4 after:h-4 md:after:absolute after:left-1/2 after:-translate-x-1/2 after:rotate-45 after:-bottom-2 after:bg-inherit hidden"
+                >Registration Form
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-external-link"
+                >
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </span>
+              <img
+                src="./assets/images/registrationForm.png"
+                alt="registrationForm"
+                class="lg:max-w-[400px] md:max-w-xs w-full drop-shadow-[0_0px_60px_rgba(59,130,246,0.7)] z-10 mr-auto relative"
+              />
+            </div>
+          </a>
+        </div>
+        <div
+          class="flex md:flex-row flex-col md:gap-[80px] gap-4 items-center sm:mt-20 mt-12 relative"
+        >
+          <div
+            class="h-[1px] left-1/4 right-1/2 bg-[#ff710f] absolute top-[36%] md:block hidden"
+          ></div>
+          <a
+            href="https://globescout.netlify.app/"
+            class="absolute left-1/2 -translate-x-1/2 top-1/3 bg-[#111] z-10 md:block hidden"
+            target="_blank"
+          >
+            <div
+              class="w-4 h-4 rounded-full border-[3px] border-[#ff710f] hover:scale-110 ease-in-out duration-100"
+            ></div>
+          </a>
+          <a href="https://globescout.netlify.app/" class="flex w-full mb-20" target="_blank">
+            <div class="relative group md:hover:scale-105 ease-linear duration-200">
+              <span
+                class="md:flex bg-[#ff710f] w-max px-4 py-2 rounded items-center gap-2 md:absolute top-4 group-hover:-top-16 ease-jump duration-200 left-1/2 md:-translate-x-1/2 after:w-4 after:h-4 md:after:absolute after:left-1/2 after:-translate-x-1/2 after:rotate-45 after:-bottom-2 after:bg-inherit hidden"
+              >
+                GlobeScout
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-external-link"
+                >
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </span>
+              <img
+                src="./assets/images/worldView.png"
+                alt="ShoesApp"
+                class="lg:max-w-[400px] md:max-w-xs w-full drop-shadow-[0_0px_60px_rgba(59,130,246,0.7)] z-10 mr-auto relative"
+              />
+            </div>
+          </a>
+          <div class="w-full ml-10 mr-10 mb-20">
+            <h3 class="text-[#ff710f] font-bold lg:text-4xl text-3xl">GlobeScout</h3>
+            <span class="text-[#ff710f] lg:text-lg text-base">Country Explorer Web App</span>
+            <p class="text-justify mt-2 lg:text-base text-sm">
+              Created a country explorer app with React, Axios, and React Router. It features
+              dynamic routing, region filtering, search, light/dark mode, and state management with
+              Context API, displaying country data from external APIs in a responsive interface.
+            </p>
+            <ul class="flex flex-wrap gap-2 mt-2">
+              <li
+                class="border rounded-[50px] border-[#999] px-[10px] py-[5px] lg:text-[16px] text-sm"
+              >
+                #shimmerEffect
+              </li>
+              <li
+                class="border rounded-[50px] border-[#999] px-[10px] py-[5px] lg:text-[16px] text-sm"
+              >
+                #axios
+              </li>
+              <li
+                class="border rounded-[50px] border-[#999] px-[10px] py-[5px] lg:text-[16px] text-sm"
+              >
+                #javaScript
+              </li>
+              <li
+                class="border rounded-[50px] border-[#999] px-[10px] py-[5px] lg:text-[16px] text-sm"
+              >
+                #react
+              </li>
+              <li
+                class="border rounded-[50px] border-[#999] px-[10px] py-[5px] lg:text-[16px] text-sm"
+              >
+                #dynamicRouting
+              </li>
+              <li
+                class="border rounded-[50px] border-[#999] px-[10px] py-[5px] lg:text-[16px] text-sm"
+              >
+                #ContextApi
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="w-[2px] bg-orange-600 absolute top-0 bottom-0 left-1/2 -translate-x-1/2 md:block hidden"
+        ></div>
+      </section>
+      <section class="max-w-screen-xl mx-auto md:pb-12 pb-4">
+        <h2
+          class="sm:text-3xl md:w-max text-[22px] md:text-[40px] bg-[#111] relative z-10 font-bold md:px-4 px-0 md:py-2 py-0 mx-auto text-center text-[#1788ae] md:border-2 border-[#1788ae] rounded-md"
+        >
+          Technologies I’m Working With
+        </h2>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper items-center my-0">
+            <div class="swiper-slide md:py-16 py-6">
+              <div
+                class="flex md:flex-row flex-col items-center lg:max-w-[800px] md:max-w-[600px] sm:max-w-[500px] max-w-[300px] md:p-9 p-4 rounded-lg shadow-[0_0px_60px_rgba(59,130,246,0.6)] cursor-grab"
+              >
+                <img
+                  class="shrink-0 md:w-28 md:h-28 w-24 h-24 rounded-full md:my-16 my-4 shadow-[0_0px_60px_rgba(59,130,246,1)]"
+                  src="./assets/images/HTML5.webp"
+                  alt="html-logo"
+                />
+                <div class="ml-6 text-left md:my-16 my-4 relative">
+                  <p class="sm:text-base text-sm">
+                    "Skilled in HTML5 for structuring and presenting content on the web. I use HTML5
+                    semantic elements and advanced features to create well-structured, accessible,
+                    and SEO-friendly web pages."
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide md:py-16 py-6">
+              <div
+                class="flex md:flex-row flex-col items-center lg:max-w-[800px] md:max-w-[600px] sm:max-w-[500px] max-w-[300px] md:p-9 p-4 rounded-lg shadow-[0_0px_60px_rgba(59,130,246,0.6)] cursor-grab"
+              >
+                <img
+                  class="shrink-0 md:w-28 md:h-28 w-24 h-24 rounded-full md:my-16 my-4 shadow-[0_0px_60px_rgba(59,130,246,1)]"
+                  src="./assets/images/css-logo.webp"
+                  alt="css-logo"
+                />
+                <div class="ml-6 text-left md:my-16 my-4 relative">
+                  <p class="sm:text-base text-sm">
+                    "Experienced in CSS for crafting visually stunning and responsive web designs. I
+                    employ advanced styling techniques to create flexible layouts and ensure a
+                    consistent, engaging user experience across all devices and screen sizes."
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide md:py-16 py-6">
+              <div
+                class="flex md:flex-row flex-col items-center lg:max-w-[800px] md:max-w-[600px] sm:max-w-[500px] max-w-[300px] md:p-9 p-4 rounded-lg shadow-[0_0px_60px_rgba(59,130,246,0.6)] cursor-grab"
+              >
+                <img
+                  class="shrink-0 md:w-28 md:h-28 w-24 h-24 rounded-full md:my-16 my-4 shadow-[0_0px_60px_rgba(59,130,246,1)]"
+                  src="./assets/images/javascript-logo.png"
+                  alt="javascript-logo"
+                />
+                <div class="ml-6 text-left md:my-16 my-4 relative">
+                  <p class="sm:text-base text-sm">
+                    "Proficient in JavaScript for creating interactive and responsive web
+                    applications. I leverage modern ES6+ features to build efficient, maintainable
+                    code and solve complex problems, enhancing the functionality and performance of
+                    web projects."
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide md:py-16 py-6">
+              <div
+                class="flex md:flex-row flex-col items-center lg:max-w-[800px] md:max-w-[600px] sm:max-w-[500px] max-w-[300px] md:p-9 p-4 rounded-lg shadow-[0_0px_60px_rgba(59,130,246,0.6)] cursor-grab"
+              >
+                <img
+                  class="shrink-0 md:w-28 md:h-28 w-24 h-24 rounded-full md:my-16 my-4 shadow-[0_0px_60px_rgba(59,130,246,1)]"
+                  src="./assets/images/react-logo.png"
+                  alt="react-logo "
+                />
+                <div class="ml-6 text-left md:my-16 my-4 relative">
+                  <p class="sm:text-base text-sm">
+                    "Skilled in developing dynamic web applications with React. I build scalable,
+                    high-performance projects using Redux for state management and React hooks to
+                    enhance efficiency and user experience."
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide md:py-16 py-6">
+              <div
+                class="flex md:flex-row flex-col items-center lg:max-w-[800px] md:max-w-[600px] sm:max-w-[500px] max-w-[300px] md:p-9 p-4 rounded-lg shadow-[0_0px_60px_rgba(59,130,246,0.6)] cursor-grab"
+              >
+                <img
+                  class="shrink-0 md:w-28 md:h-28 w-24 h-24 rounded-full md:my-16 my-4 shadow-[0_0px_60px_rgba(59,130,246,1)]"
+                  src="./assets/images/Redux-image.webp"
+                  alt="Redux-image"
+                />
+                <div class="ml-6 text-left md:my-16 my-4 relative">
+                  <p class="sm:text-base text-sm">
+                    "Proficient in using Redux for managing complex application state. I implement
+                    Redux to ensure predictable state changes and maintain consistency across
+                    components, enhancing the scalability and maintainability of web applications."
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide md:py-16 py-6">
+              <div
+                class="flex md:flex-row flex-col items-center lg:max-w-[800px] md:max-w-[600px] sm:max-w-[500px] max-w-[300px] md:p-9 p-4 rounded-lg shadow-[0_0px_60px_rgba(59,130,246,0.6)] cursor-grab"
+              >
+                <img
+                  class="shrink-0 md:w-28 md:h-28 w-24 h-24 rounded-full md:my-16 my-4 shadow-[0_0px_60px_rgba(59,130,246,1)]"
+                  src="./assets/images/Tailwind-css.png"
+                  alt="Tailwind-logo"
+                />
+                <div class="ml-6 text-left md:my-16 my-4 relative">
+                  <p class="sm:text-base text-sm">
+                    "Experienced with Tailwind CSS for building visually appealing and responsive
+                    designs. I use Tailwind’s utility-first approach to create custom, scalable, and
+                    maintainable user interfaces with speed and efficiency."
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide md:py-16 py-6">
+              <div
+                class="flex md:flex-row flex-col items-center lg:max-w-[800px] md:max-w-[600px] sm:max-w-[500px] max-w-[300px] md:p-9 p-4 rounded-lg shadow-[0_0px_60px_rgba(59,130,246,0.6)] cursor-grab"
+              >
+                <img
+                  class="shrink-0 md:w-28 md:h-28 w-24 h-24 rounded-full md:my-16 my-4 shadow-[0_0px_60px_rgba(59,130,246,1)"
+                  src="./assets/images/Bootstrap_logo.webp"
+                  alt="Bootstrap_logo"
+                />
+                <div class="ml-6 text-left md:my-16 my-4 relative">
+                  <p class="sm:text-base text-sm">
+                    I use Bootstrap components to build responsive, mobile-first applications.
+                    Leveraging its pre-designed elements and grid system, I create modern,
+                    user-friendly interfaces that adapt seamlessly to various devices.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide md:py-16 py-6">
+              <div
+                class="flex md:flex-row flex-col items-center lg:max-w-[800px] md:max-w-[600px] sm:max-w-[500px] max-w-[300px] md:p-9 p-4 rounded-lg shadow-[0_0px_60px_rgba(59,130,246,0.6)] cursor-grab"
+              >
+                <a
+                  href="https://github.com/ssrawat1"
+                  target="_blank"
+                  class="md:w-28 md:h-28 w-24 h-24 shrink-0 md:my-16 my-4"
+                >
+                  <img
+                    class="rounded-full shadow-[0_0px_60px_rgba(59,130,246,1)] bg-white"
+                    src="./assets/images/github-logo.webp"
+                    alt="github-logo"
+                  />
+                </a>
+                <div class="ml-6 text-left md:my-16 my-4 relative">
+                  <p class="sm:text-base text-sm">
+                    Visit my GitHub to see front-end projects that demonstrate my expertise in
+                    HTML5, CSS3, JavaScript, and Bootstrap. Each project includes responsive designs
+                    and practical implementations, with Figma used for creating detailed prototypes.
+                    Explore the code, documentation, and design files to get a sense of my work.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+      <section class="max-w-screen-xl md:mx-auto mx-10 md:my-10 my-4">
+        <h2
+          class="sm:text-4xl text-3xl md:text-[40px] bg-[#111] w-max relative z-10 font-bold md:px-6 px-0 md:py-4 py-0 mx-auto text-center text-[#1788ae] md:border-2 border-[#1788ae] rounded-md"
+        >
+          Let's connect
+        </h2>
+        <div class="flex flex-col md:flex-row items-center mt-10">
+          <div class="w-full">
+            <img src="./assets/images/contact-me.svg" alt="phone" />
+          </div>
+          <form class="w-full mx-10" name="contactUs" netlify>
+            <div class="flex items-center">
+              <svg
+                class="w-5 h-5 text-gray-400 dark:text-gray-300"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 13a8.949 8.949 0 0 1-4.951-1.488A3.987 3.987 0 0 1 9 13h2a3.987 3.987 0 0 1 3.951 3.512A8.949 8.949 0 0 1 10 18Z"
+                />
+              </svg>
+              <label for="name" class="block my-2 text-lg font-medium text-white mx-1">Name</label>
+            </div>
+            <div class="relative">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="bg-gray-600 border-2 outline-none border-gray-600 text-gray-50 text-sm rounded-lg focus:ring-[#1788ae] focus:border-[#1788ae] block w-full ps-5 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Enter your name"
+              />
+            </div>
+            <div class="flex items-center">
+              <svg
+                class="w-4 h-4 text-gray-400 dark:text-gray-300"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 16"
+              >
+                <path
+                  d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"
+                />
+                <path
+                  d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"
+                />
+              </svg>
+              <label for="email" class="block my-2 md:text-lg text-base font-medium text-white mx-1"
+                >Email</label
+              >
+            </div>
+            <div class="relative">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="bg-gray-600 border-2 outline-none border-gray-600 text-gray-50 text-sm rounded-lg focus:ring-[#1788ae] focus:border-[#1788ae] block w-full ps-5 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Enter your email"
+              />
+            </div>
+            <div class="flex items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-message-square my-2"
+              >
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+              <label
+                for="message"
+                class="block my-2 md:text-lg text-base font-medium text-white mx-1"
+                >Message</label
+              >
+            </div>
+            <textarea
+              id="message"
+              rows="8"
+              name="message"
+              class="mb-4 block p-2.5 w-full text-sm text-gray-50 bg-gray-600 rounded-lg border border-gray-300 focus:ring-[#1788ae] focus:border-[#1788ae] outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Leave a comment..."
+            ></textarea>
+            <button
+              type="send-message"
+              class="flex items-center justify-center text-white bg-[#1788ae] hover:bg-[#1280a4] focus:ring-4 focus:outline-none focus:ring-[#4489a4] text-sm font-medium rounded px-5 py-2.5 text-center w-full"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                width="18"
+                class="mr-2"
+                style="fill: #fff"
+              >
+                <path
+                  d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480l0-83.6c0-4 1.5-7.8 4.2-10.8L331.8 202.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8 17.7 316.6C7.1 311.3 .3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z"
+                />
+              </svg>
+              Send Message
+            </button>
+          </form>
+        </div>
+      </section>
+      <footer class="flex flex-col justify-center items-center text-center text-slate-400 pb-10">
+        <p class="text-sm text-[#999]">Sanjay Singh © 2024</p>
+        <div id="goToTop" class="black-logo my-4 group">
+          <a href="#">
+            <div
+              class="hidden group-hover:block md:after:w-4 md:after:h-4 after:w-3 after:h-3 after:absolute after:left-1/2 after:-translate-y-1/2 md:after:translate-x-[83px] after:translate-x-[78px] after:rotate-45 after:bg-[#1788ae] z-10"
+            ></div>
+            <span
+              class="text-slate-50 md:text-base text-xs left-1/2 absolute hidden group-hover:block translate-x-12 bg-[#1788ae] px-2 py-1 rounded-sm z-10 ease-jump duration-200"
+            >
+              Go To Top</span
+            >
+            <img
+              class="relative max-w-24 max-h-24"
+              src="assets/images/name-logo.jpg"
+              alt="image-logo"
+            />
+          </a>
+        </div>
+        <ul class="social-links flex justify-center items-center md:gap-6 gap-4">
+          <li class="linkedin-icon">
+            <a href="https://www.linkedin.com/in/sanjay-singh-rawat-a39b11302" target="_blank">
+              <svg
+                class="full hover:text-white text-[#b0b2c3] hover:font-bold"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                height="20"
+              >
+                <path
+                  fill="currentColor"
+                  d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="instagram-icon">
+            <a href="https://www.instagram.com/sanjay_uk09" target="_blank">
+              <svg
+                class="full hover:text-white text-[#b0b2c3] hover:font-bold"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                height="20"
+              >
+                <path
+                  fill="currentColor"
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="gmail-icon">
+            <a href="mailto:ssr911999@gmail.com" target="_blank">
+              <svg
+                class="full hover:text-white text-[#b0b2c3] hover:font-bold"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                height="20"
+              >
+                <path
+                  fill="currentColor"
+                  d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="github-icon">
+            <a href="https://github.com/ssrawat1" target="_blank">
+              <svg
+                class="full hover:text-white text-[#b0b2c3] hover:font-bold"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 496 512"
+                height="20"
+              >
+                <path
+                  fill="currentColor"
+                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        cssMode: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        mousewheel: true,
+        keyboard: true,
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.12.0/matter.min.js"></script>
+    <script src="https://cdn/jsdelivr.net/npm/matter-wrap@0.2.0/build/matter-wrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/matter-attractors@0.1.6/build/matter-attractors.min.js"></script>
+  </body>
+</html>
